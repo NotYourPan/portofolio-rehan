@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Muhammad Rayhan Adriansyah — Portofolio</title>
+  <meta name="description" content="Portofolio Muhammad Rayhan Adriansyah, mahasiswa Sistem Komputer Universitas Pamulang Serang. Fokus pada Sistem Informasi Geografis, pengembangan web, dan pemetaan digital." />
+  <meta name="theme-color" content="#F2F4F1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,300..900;1,62..125,300..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2C10 2 5.5 6.6 5.5 12.4 5.5 20 16 30 16 30s10.5-10 10.5-17.6C26.5 6.6 22 2 16 2z' fill='%23E05A1B'/%3E%3Ccircle cx='16' cy='12.5' r='4' fill='%23F2F4F1'/%3E%3C/svg%3E" />
+</head>
+<body>
+  <a class="skip" href="#tentang">Lewati ke konten</a>
+
+  <!-- Rute pengiriman: indikator posisi scroll -->
+  <nav class="route" aria-hidden="true">
+    <svg class="route__svg" viewBox="0 0 24 100" preserveAspectRatio="none">
+      <line class="route__base" x1="12" y1="0" x2="12" y2="100" />
+      <line class="route__done" x1="12" y1="0" x2="12" y2="100" />
+    </svg>
+    <ol class="route__stops"></ol>
+    <span class="route__marker"></span>
+  </nav>
+  <div class="topbar-progress" aria-hidden="true"><span></span></div>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Kembali ke atas">
+      <svg viewBox="0 0 32 32" width="22" height="22" aria-hidden="true"><path d="M16 2C10 2 5.5 6.6 5.5 12.4 5.5 20 16 30 16 30s10.5-10 10.5-17.6C26.5 6.6 22 2 16 2z" fill="currentColor"/><circle cx="16" cy="12.5" r="4" fill="var(--paper)"/></svg>
+      <span>Rayhan Adriansyah</span>
+    </a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="nav-menu">
+      <span class="menu-toggle__bars" aria-hidden="true"></span>
+      <span class="sr-only">Buka menu</span>
+    </button>
+    <ul class="nav" id="nav-menu">
+      <li><a href="#tentang">Tentang</a></li>
+      <li><a href="#proyek">Proyek</a></li>
+      <li><a href="#keahlian">Keahlian</a></li>
+      <li><a href="#kontak" class="nav__cta">Hubungi saya</a></li>
+    </ul>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero" data-stop="Mulai">
+      <canvas class="hero__map" aria-hidden="true"></canvas>
+      <div class="hero__pins" aria-hidden="true"></div>
+      <div class="hero__cross" aria-hidden="true">
+        <span class="hero__cross-x"></span><span class="hero__cross-y"></span>
+      </div>
+
+      <div class="hero__inner">
+        <p class="hero__place">Serang, Banten</p>
+        <h1 class="hero__name">
+          <span class="line"><span>Muhammad</span></span>
+          <span class="line"><span>Rayhan</span></span>
+          <span class="line"><span>Adriansyah</span></span>
+        </h1>
+        <p class="hero__lede">Mahasiswa Sistem Komputer yang membangun peta interaktif dan sistem informasi geografis — supaya orang bisa menemukan layanan di sekitarnya dengan lebih mudah.</p>
+        <div class="hero__actions">
+          <a class="btn btn--solid" href="#proyek">Lihat proyek GeoMap</a>
+          <a class="btn btn--ghost" href="#kontak">Hubungi saya</a>
+        </div>
+      </div>
+
+      <div class="hero__readout" aria-live="off">
+        <span class="hero__coord" data-coord>6°07′ LS, 106°09′ BT</span>
+        <span class="hero__hint">Ketuk peta untuk menandai titik</span>
+      </div>
+    </section>
+
+    <!-- TENTANG -->
+    <section class="section about" id="tentang" data-stop="Tentang">
+      <div class="wrap about__grid">
+        <h2 class="h2">Tentang saya</h2>
+        <div class="about__body">
+          <p class="about__lead">Saya Muhammad Rayhan Adriansyah, mahasiswa Universitas Pamulang Serang, Jurusan Sistem Komputer. Fokus saya ada di pengembangan sistem informasi, pemetaan digital, dan pemanfaatan teknologi geospasial.</p>
+          <p>Proyek utama saya adalah <strong>GeoMap Kantor Pos Indonesia</strong>, aplikasi berbasis peta untuk menampilkan lokasi, informasi layanan, dan sebaran kantor pos secara interaktif.</p>
+          <p>Saya tertarik pada Sistem Informasi Geografis (SIG/GIS), pengembangan web, basis data, dan integrasi peta digital. Menurut saya, pemetaan lokasi berbasis SIG adalah cara paling langsung untuk membantu masyarakat menemukan layanan pos terdekat secara online.</p>
+        </div>
+        <dl class="facts">
+          <div><dt>Kampus</dt><dd>Universitas Pamulang, Kampus Serang</dd></div>
+          <div><dt>Jurusan</dt><dd>Sistem Komputer</dd></div>
+          <div><dt>Fokus</dt><dd>SIG/GIS, web, basis data</dd></div>
+          <div><dt>Proyek utama</dt><dd>GeoMap Kantor Pos Indonesia</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- PROYEK -->
+    <section class="section project" id="proyek" data-stop="Proyek">
+      <div class="wrap">
+        <div class="project__head">
+          <h2 class="h2">GeoMap Kantor Pos Indonesia</h2>
+          <p class="project__summary">Aplikasi pemetaan berbasis web untuk menampilkan lokasi kantor pos di seluruh Indonesia. Pengguna bisa mencari kantor pos terdekat, melihat alamat, dan mengetahui layanan yang tersedia lewat peta interaktif.</p>
+          <dl class="meta">
+            <div><dt>Peran</dt><dd>Pengembang &amp; perancang sistem</dd></div>
+            <div><dt>Status</dt><dd><span class="status-dot"></span>Selesai, terus dikembangkan</dd></div>
+            <div class="meta__wide"><dt>Teknologi</dt>
+              <dd>
+                <ul class="chips">
+                  <li>Leaflet</li><li>Google Maps</li><li>HTML</li><li>CSS</li><li>JavaScript</li><li>PHP / Laravel</li><li>MySQL</li>
+                </ul>
+              </dd>
+            </div>
+          </dl>
+        </div>
+
+        <!-- Demo interaktif -->
+        <div class="demo" aria-label="Demo interaktif GeoMap">
+          <div class="demo__side">
+            <label class="demo__label" for="demo-search">Cari kantor pos</label>
+            <div class="demo__search">
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M16 16l4.5 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              <input id="demo-search" type="search" placeholder="Nama, kota, kecamatan, atau kode pos" autocomplete="off" />
+            </div>
+            <div class="demo__tools">
+              <button class="btn btn--small" type="button" data-locate>Pakai lokasi saya</button>
+              <span class="demo__tip">atau ketuk peta untuk menandai posisi Anda</span>
+            </div>
+            <ul class="demo__list" role="listbox" aria-label="Hasil pencarian"></ul>
+            <p class="demo__empty" hidden>Tidak ada kantor pos yang cocok. Coba nama kota atau kode pos lain.</p>
+          </div>
+
+          <div class="demo__mapwrap">
+            <div class="demo__map" tabindex="-1">
+              <canvas class="demo__canvas" aria-hidden="true"></canvas>
+              <svg class="demo__links" aria-hidden="true"></svg>
+              <div class="demo__pins"></div>
+              <div class="demo__you" hidden aria-hidden="true"></div>
+            </div>
+            <article class="demo__card" hidden aria-live="polite"></article>
+            <p class="demo__note">Data di demo ini adalah contoh ilustratif untuk wilayah Banten.</p>
+          </div>
+        </div>
+
+        <div class="project__grid">
+          <div class="block block--features">
+            <h3 class="h3">Fitur utama</h3>
+            <ul class="ticks">
+              <li>Lokasi kantor pos tampil di peta interaktif.</li>
+              <li>Pencarian berdasarkan nama, kota, kecamatan, atau kode pos.</li>
+              <li>Detail tiap kantor pos: alamat, jam operasional, jenis layanan, dan kontak.</li>
+              <li>Menentukan kantor pos terdekat dari lokasi pengguna.</li>
+              <li>Rute menuju kantor pos lewat Google Maps.</li>
+              <li>Halaman admin untuk mengelola nama, alamat, koordinat, status, dan layanan.</li>
+              <li>Data lokasi tersimpan di basis data sebagai koordinat latitude dan longitude.</li>
+            </ul>
+          </div>
+
+          <div class="block">
+            <h3 class="h3">Tanggung jawab saya</h3>
+            <ul class="ticks">
+              <li>Merancang struktur aplikasi dan alur penggunaan.</li>
+              <li>Membuat tampilan peta interaktif.</li>
+              <li>Mengintegrasikan data lokasi kantor pos ke dalam peta.</li>
+              <li>Merancang database kantor pos dan layanan.</li>
+              <li>Membuat fitur pencarian dan tampilan detail lokasi.</li>
+              <li>Menguji tampilan serta fungsi pencarian lokasi.</li>
+            </ul>
+          </div>
+
+          <div class="block">
+            <h3 class="h3">Manfaat</h3>
+            <ul class="ticks">
+              <li>Masyarakat lebih mudah menemukan kantor pos terdekat.</li>
+              <li>Pos Indonesia bisa melihat sebaran kantor pos secara visual.</li>
+              <li>Mendukung digitalisasi layanan pos dan pengelolaan data lokasi.</li>
+              <li>Informasi layanan pos tidak lagi sulit dicari.</li>
+            </ul>
+          </div>
+
+          <div class="block block--result">
+            <h3 class="h3">Hasil</h3>
+            <p>Aplikasi menampilkan titik lokasi kantor pos di peta, memberi informasi singkat tiap lokasi, dan membantu pengguna mencari kantor pos berdasarkan wilayah atau lokasi terdekat.</p>
+            <p class="block__aside">Terinspirasi dari kebutuhan digitalisasi layanan pos — seperti platform Geopos yang memetakan titik layanan penyelenggara pos di Indonesia lewat peta interaktif.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KEAHLIAN -->
+    <section class="section skills" id="keahlian" data-stop="Keahlian">
+      <div class="wrap">
+        <h2 class="h2">Keahlian</h2>
+        <div class="layers">
+          <article class="layer">
+            <h3 class="layer__title">Sistem Informasi Geografis</h3>
+            <p>Pemetaan titik layanan, data koordinat, visualisasi sebaran, dan pencarian lokasi terdekat.</p>
+            <ul class="chips"><li>Leaflet</li><li>Google Maps API</li><li>Geolokasi</li><li>Data spasial</li></ul>
+          </article>
+          <article class="layer">
+            <h3 class="layer__title">Pengembangan web</h3>
+            <p>Membangun antarmuka yang responsif dan halaman admin untuk mengelola data.</p>
+            <ul class="chips"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>PHP</li><li>Laravel</li></ul>
+          </article>
+          <article class="layer">
+            <h3 class="layer__title">Basis data</h3>
+            <p>Merancang struktur tabel untuk lokasi, layanan, dan status, termasuk penyimpanan latitude dan longitude.</p>
+            <ul class="chips"><li>MySQL</li><li>Perancangan ERD</li><li>Query lokasi</li></ul>
+          </article>
+          <article class="layer">
+            <h3 class="layer__title">Perancangan sistem</h3>
+            <p>Menyusun alur penggunaan, struktur aplikasi, dan pengujian fungsi dari sisi pengguna.</p>
+            <ul class="chips"><li>Alur pengguna</li><li>Struktur aplikasi</li><li>Pengujian</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- KONTAK -->
+    <section class="section contact" id="kontak" data-stop="Kontak">
+      <div class="wrap contact__grid">
+        <div>
+          <h2 class="h2 contact__title">Mari bekerja sama</h2>
+          <p class="contact__lede">Terbuka untuk magang, proyek pemetaan, dan pengembangan sistem informasi. Kirim pesan dan saya akan membalas secepatnya.</p>
+        </div>
+        <ul class="contact__list" data-contacts></ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer__row">
+      <span>© <span data-year></span> Muhammad Rayhan Adriansyah</span>
+      <a href="#top">Kembali ke atas</a>
+    </div>
+  </footer>
+
+  <div class="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
